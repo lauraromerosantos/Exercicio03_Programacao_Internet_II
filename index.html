@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search contact</title>
+</head>
+<body>
+    <br><br><br>
+    <h1>___Search contact___</h1>
+    <div id="SearchContact"> Click on the button to search </div>
+    <br><br><br>
+    <button onclick="Search()">SEARCH</button>
+    <script>
+        function Search(){
+            var divSearchContact = document.getElementById("SearchContact");
+            divSearchContact.innerHTML = "Loading..."
+
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function(){
+
+                if(this.readyState == 4 && this.status== 200){
+                    divSearchContact.innerHTML=this.responseText
+                }
+                if(this.readyState == 4 && this.status== 404){
+                    alert("Error 404: Not Found");
+                }
+        };
+        xhttp.open("GET","Contact.txt", true);
+        xhttp.send();
+
+    }     
+    </script>
+    
+</body>
+</html>
