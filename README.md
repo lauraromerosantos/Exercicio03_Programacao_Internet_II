@@ -1,2 +1,3 @@
 # Exercicio03_Programacao_Internet_II
- 📙 Exercício 03 desenvolvido para disciplina de Programação para Internet II 2020/2.
+ 
+ Construa uma função usando AJAX que busque no servidor o seu nome e e-mail, apresentando estes dados ao usuário quando ele clicar no botão *__"ver contato"__*
